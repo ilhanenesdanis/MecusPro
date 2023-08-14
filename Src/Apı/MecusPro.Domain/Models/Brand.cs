@@ -4,6 +4,8 @@ namespace MecusPro.Domain.Models
 {
     public class Brand:BaseEntity
     {
-        public string MecusName { get; set; }
+        public string Name { get; set; }
+        public string BrandLogo { get; set; }
+
     }
 }

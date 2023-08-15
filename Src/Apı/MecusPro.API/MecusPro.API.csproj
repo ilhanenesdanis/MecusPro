@@ -19,4 +19,10 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MecusPro.Application\MecusPro.Application.csproj" />
+    <ProjectReference Include="..\MecusPro.Infrastructure\MecusPro.Infrastructure.csproj" />
+    <ProjectReference Include="..\MecusPro.Persistence\MecusPro.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

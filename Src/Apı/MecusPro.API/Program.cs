@@ -1,3 +1,4 @@
+using MecusPro.Application.IOC;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +7,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+#region HealthChecks
+builder.Services.AddHealthChecks();
+#endregion
+#region ServiceRegistiration
+builder.Services.AddApplicationDependency();
+#endregion
 
 var app = builder.Build();
 
@@ -19,6 +27,8 @@ if (app.Environment.IsDevelopment())
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+
+app.UseHealthChecks("/health");
 
 app.MapControllers();
 

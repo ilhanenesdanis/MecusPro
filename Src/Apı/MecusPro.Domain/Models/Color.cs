@@ -10,5 +10,6 @@ namespace MecusPro.Domain.Models
 
         public int LanguageId { get; set; }
         public Languages Languages { get; set; }
+        public ICollection<ProductColor> ProductColors { get; set; }
     }
 }

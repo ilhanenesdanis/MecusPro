@@ -14,5 +14,6 @@ namespace MecusPro.Domain.Models
 
         public int LanguageId { get; set; }
         public Languages languages { get; set; }
+        public ICollection<ProductImages> ProductImages { get; set; }
     }
 }

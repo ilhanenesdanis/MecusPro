@@ -1,0 +1,13 @@
+﻿using MecusPro.Domain.Models;
+using MecusPro.Domain.Models.BaseModel;
+
+namespace MecusPro.Domain.Models
+{
+    public class ProductCategory : BaseEntity
+    {
+        public int ProductId { get; set; }
+        public Product Product { get; set; }
+        public int CategoryId { get; set; }
+        public Category Category { get; set; }
+    }
+}
